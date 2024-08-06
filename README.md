@@ -39,4 +39,16 @@ Note: 安裝 [Spring Explyt](https://plugins.jetbrains.com/plugin/23273-spring-e
 6. 使用 httPie 測試，在 terminal 輸入 `http :8080`，如下結果
    ![http:](src/main/resources/static/img/ollama3.1_pic2.png)
 
-7. 
+7. 加入 WeatherAPI 功能
+   - 建立 CityController
+   - WeatherService 實作 Function.apply 方法
+   - FunctionConfiguration 定義 currentWeatherFunction 這個預設功能
+   - 把從 [weather-api網站](https://www.weatherapi.com/pricing.aspx) 拿到的 api-key 貼到環境變數
+     ![api-key](src/main/resources/static/img/ollama3.1_pic3.png)
+
+
+8. 測試結果如下
+    
+   `http :8080/cities message=="What is the current weather like in Penghu Taiwan?"`
+   ![api-key](src/main/resources/static/img/ollama3.1_pic4.png)
+ 
